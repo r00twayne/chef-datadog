@@ -7,6 +7,21 @@ instances:
     - <%= t %>
       <% end -%>
     <% end -%>
+
+    <% if i.key?('additional_metrics') -%>
+    additional_metrics:
+      <% i['additional_metrics'].each do |a_m| -%>
+    - <%= a_m %>
+      <% end -%>
+    <% end -%>
+
+    <% if i.key?('collections') -%>
+    collections:
+      <% i['collections'].each do |c| -%>
+    - <%= c %>
+      <% end -%>
+    <% end -%>
+
   <% end -%>
 
 init_config:
